@@ -47,6 +47,8 @@ public class Waypoint : MonoBehaviour {
 	[Header("Hide Distance")]
 	public float threshold = 0.125f;
 
+	private bool playingParticle;
+
 	void Awake() {
 		_material = Instantiate(material);
 		_color_origional = _material.color;
@@ -54,6 +56,7 @@ public class Waypoint : MonoBehaviour {
 		_audio_source = gameObject.GetComponent<AudioSource>();
 		_audio_source.clip = clip_click;
 		_audio_source.playOnAwake = false;
+		GetComponent<ParticleSystem>().Stop();
 	}
 
 
@@ -111,6 +114,8 @@ public class Waypoint : MonoBehaviour {
 
 	public void Exit() {
 		_state = State.Idle;
+
+		GetComponent<ParticleSystem>().Stop();
 	}
 
 
@@ -129,6 +134,8 @@ public class Waypoint : MonoBehaviour {
 
 		_scale = Mathf.Lerp(_scale, scale, lerp_idle);
 		_color = Color.Lerp(_color, color, lerp_idle);
+
+		playingParticle = false;
 	}
 
 
@@ -138,6 +145,11 @@ public class Waypoint : MonoBehaviour {
 
 		_scale = Mathf.Lerp(_scale, scale, lerp_focus);
 		_color = Color.Lerp(_color, color, lerp_focus);
+
+		if (!playingParticle) {
+			playingParticle = true;
+			GetComponent<ParticleSystem>().Play();
+		}
 	}
 
 
