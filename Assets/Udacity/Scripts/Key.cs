@@ -3,7 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Key : MonoBehaviour {
+	public int velocityRotation = 80;
+	public GameObject[] keysPositions;
+
 	//Create a reference to the KeyPoofPrefab and Door
+
+	private void Awake() {
+		int randomKeyPosition = Random.Range(0, keysPositions.Length);
+		transform.position = keysPositions[randomKeyPosition].transform.position;
+	}
 
 	void Update() {
 		//Not required, but for fun why not try adding a Key Floating Animation here :)
