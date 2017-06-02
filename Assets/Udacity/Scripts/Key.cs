@@ -1,10 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Key : MonoBehaviour {
-	private int velocityRotation = 80;
 	public GameObject[] keysPositions;
+	public GameObject KeyPoofPrefab;
+
+	private Vector3 keyPosition;
+	private int velocityRotation = 80;
 	private AudioSource audioSource;
 	private bool haveKey = false;
 	private bool destroyedKey = false;
@@ -12,8 +13,8 @@ public class Key : MonoBehaviour {
 	//Create a reference to the KeyPoofPrefab and Door
 
 	private void Awake() {
-		int randomKeyPosition = Random.Range(0, keysPositions.Length);
-		transform.position = keysPositions[randomKeyPosition].transform.position;
+		keyPosition = keysPositions[Random.Range(0, keysPositions.Length)].transform.position;
+		transform.position = keyPosition;
 
 		audioSource = GetComponent<AudioSource>();
 		audioSource.playOnAwake = false;
@@ -27,7 +28,7 @@ public class Key : MonoBehaviour {
 			transform.localScale += new Vector3(0, -1f, 0.5f);
 			transform.position += Vector3.up * 0.01f;
 
-			if (transform.localScale.y < 0) {
+			if (transform.localScale.y <= 0) {
 				destroyedKey = true;
 				Destroy(gameObject);
 			}
@@ -35,13 +36,14 @@ public class Key : MonoBehaviour {
 	}
 
 	public void OnKeyClicked() {
-		// Instatiate the KeyPoof Prefab where this key is located
-		// Make sure the poof animates vertically
+		// ok - Instatiate the KeyPoof Prefab where this key is located
+		// ok - Make sure the poof animates vertically
 		// Call the Unlock() method on the Door
 		// ok - Set the Key Collected Variable to true
 		// ok - Destroy the key. Check the Unity documentation on how to use Destroy
 		haveKey = true;
 		audioSource.Play();
+		Instantiate(KeyPoofPrefab, transform.position, Quaternion.Euler(-90, 0, 0));
 	}
 
 }
