@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 65366757754623096}
   - component: {fileID: 114728757229156166}
   - component: {fileID: 114408506897174696}
+  - component: {fileID: 95483250976215374}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -339,6 +340,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95483250976215374
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212538085453316}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 1894ec2740ddc35498882b7224ac309b, type: 3}
+  m_Controller: {fileID: 9100000, guid: 85afe0aae336b044381ab76b70467ac5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114408506897174696
 MonoBehaviour:
   m_ObjectHideFlags: 1
