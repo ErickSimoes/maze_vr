@@ -17,6 +17,7 @@ public class Door : MonoBehaviour {
 	void Update() {
 		if (opening) {
 			doorAnimation.StopPlayback();
+			GetComponent<BoxCollider>().enabled = false;
 		}
 	}
 
