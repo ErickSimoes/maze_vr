@@ -9,7 +9,19 @@ Virtual Reality Example Project for the [Udacity VR Developer Nanodegree Program
 * **I liked**: ...
 * **It was challenging**: ...
 
+### Objective
+* Find the key inside the **maze**;
+* Exite the *maze* with the key and open the door;
+* Enjoy the treasure :wink:
+
 ### Features
 * Ported to Unity 5.6.1f1;
 * The key appears in different places;
-* The music changes as you enter the temple.
+* Waypoints emit particles when selected;
+* Walls have the Box Collider to not be transposable;
+* Key animation on colected.
+
+### Future Features
+* UI indicates whether or not you have the key.;
+* The music changes as you enter the temple;
+* Open chest.
