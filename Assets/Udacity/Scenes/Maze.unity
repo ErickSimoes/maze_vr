@@ -3294,6 +3294,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1804512817}
   m_Script: {fileID: 11500000, guid: 39f8a5a2b11c2426cb2a2bea3e825751, type: 3}
+--- !u!95 &373957709 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95483250976215374, guid: f9822e67385a4402d9bf680e50d19d58,
+    type: 2}
+  m_PrefabInternal: {fileID: 1804512817}
 --- !u!1001 &378799581
 Prefab:
   m_ObjectHideFlags: 0
@@ -16069,6 +16074,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114728757229156166, guid: f9822e67385a4402d9bf680e50d19d58,
+        type: 2}
+      propertyPath: doorAnimation
+      value: 
+      objectReference: {fileID: 373957709}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9822e67385a4402d9bf680e50d19d58, type: 2}
   m_IsPrefabParent: 0
