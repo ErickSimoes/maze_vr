@@ -6,6 +6,10 @@ public class Door : MonoBehaviour {
 
 	public Animator doorAnimation;
 
+	public AudioSource audioSource;
+	public AudioClip doorLocked;
+	public AudioClip doorOpened;
+
 	void Start() {
 		doorAnimation.StartPlayback();
 	}
@@ -19,9 +23,11 @@ public class Door : MonoBehaviour {
 	public void OnDoorClicked() {
 		if (!locked) {
 			opening = true;
+			audioSource.clip = doorOpened;
 		} else {
-			// Play a sound to indicate the door is locked
+			audioSource.clip = doorLocked;
 		}
+		audioSource.Play();
 	}
 
 	public void Unlock() {
