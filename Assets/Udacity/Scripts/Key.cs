@@ -3,14 +3,14 @@
 public class Key : MonoBehaviour {
 	public GameObject[] keysPositions;
 	public GameObject KeyPoofPrefab;
+	public Door door;
 
 	private Vector3 keyPosition;
 	private int velocityRotation = 80;
-	private AudioSource audioSource;
 	private bool haveKey = false;
 	private bool destroyedKey = false;
 
-	//Create a reference to the KeyPoofPrefab and Door
+	private AudioSource audioSource;
 
 	private void Awake() {
 		keyPosition = keysPositions[Random.Range(0, keysPositions.Length)].transform.position;
@@ -36,11 +36,7 @@ public class Key : MonoBehaviour {
 	}
 
 	public void OnKeyClicked() {
-		// ok - Instatiate the KeyPoof Prefab where this key is located
-		// ok - Make sure the poof animates vertically
-		// Call the Unlock() method on the Door
-		// ok - Set the Key Collected Variable to true
-		// ok - Destroy the key. Check the Unity documentation on how to use Destroy
+		door.Unlock();
 		haveKey = true;
 		audioSource.Play();
 		Instantiate(KeyPoofPrefab, transform.position, Quaternion.Euler(-90, 0, 0));
