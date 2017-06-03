@@ -20,8 +20,8 @@ Virtual Reality Example Project for the [Udacity VR Developer Nanodegree Program
 * Waypoints emit particles when selected;
 * Walls have the Box Collider to not be transposable;
 * Key animation on colected.
+* Open chest.
 
 ### Future Features
 * UI indicates whether or not you have the key.;
 * The music changes as you enter the temple;
-* Open chest.
