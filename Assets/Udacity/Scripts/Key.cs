@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Key : MonoBehaviour {
 	public GameObject[] keysPositions;
 	public GameObject KeyPoofPrefab;
 	public Door door;
+	public Image imageKey;
 
 	private Vector3 keyPosition;
 	private int velocityRotation = 80;
@@ -40,6 +42,7 @@ public class Key : MonoBehaviour {
 		haveKey = true;
 		audioSource.Play();
 		Instantiate(KeyPoofPrefab, transform.position, Quaternion.Euler(-90, 0, 0));
+		imageKey.color = Color.white;
 	}
 
 }
