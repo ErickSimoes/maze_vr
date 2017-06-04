@@ -21,7 +21,7 @@ Virtual Reality Example Project for the [Udacity VR Developer Nanodegree Program
 * Walls have the Box Collider to not be transposable;
 * Key animation on colected.
 * Open chest.
+* UI indicates whether or not you have the key.;
 
 ### Future Features
-* UI indicates whether or not you have the key.;
-* The music changes as you enter the temple;
+* The game restart when the "you win" is clicked;
