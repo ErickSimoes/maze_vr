@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1199329705}
-  m_IndirectSpecularColor: {r: 0.7113886, g: 0.7296888, b: 0.72134864, a: 1}
+  m_IndirectSpecularColor: {r: 0.71103364, g: 0.7298952, b: 0.71951526, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 112000938, guid: f4b8371f4ac078a4faba46442e005e7d,
     type: 2}
-  m_ShadowMaskMode: 2
+  m_ShadowMaskMode: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1844,7 +1844,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorChest: {fileID: 526671509}
-  rotate: 0
 --- !u!4 &181126076
 Transform:
   m_ObjectHideFlags: 0
