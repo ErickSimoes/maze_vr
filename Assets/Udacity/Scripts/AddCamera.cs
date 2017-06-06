@@ -10,9 +10,9 @@ public class AddCamera : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update() {
+	/*void Update() {
 		if (canvas.worldCamera == null) {
 			canvas.worldCamera = GameObject.Find("Main Camera Right").GetComponent<Camera>();
 		}
-	}
+	}*/
 }
