@@ -1,16 +1,26 @@
 ﻿using UnityEngine;
 
 public class Coin : MonoBehaviour {
-	//Create a reference to the CoinPoofPrefab
-	
+	private float velocityRotation = 50;
+	private bool clicked = false;
+
 	private void Update() {
-		
+		transform.Rotate(Vector3.up * Time.deltaTime * velocityRotation);
+
+		if (clicked) {
+			velocityRotation += 50;
+			transform.localScale += new Vector3(0, -1f, 0.5f);
+			transform.position += Vector3.up * 0.01f;
+
+			if (transform.localScale.y <= 0) {
+				Destroy(gameObject);
+			}
+		}
 	}
 
 	public void OnCoinClicked() {
-		// Instantiate the CoinPoof Prefab where this coin is located
-		// Make sure the poof animates vertically
-		// Destroy this coin. Check the Unity documentation on how to use Destroy
+		clicked = true;
+		GetComponent<AudioSource>().Play();
 	}
 
 }

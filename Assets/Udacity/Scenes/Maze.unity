@@ -1819,7 +1819,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 181126075}
-          m_MethodName: OnCoinClicked
+          m_MethodName: OnChestClicked
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1840,7 +1840,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 181126072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4259efea429e3458b997fe590ca4b9f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 329984b83e943894ab817b87e3d04601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doorChest: {fileID: 526671509}
@@ -6964,6 +6964,12 @@ Prefab:
       propertyPath: imageKey
       value: 
       objectReference: {fileID: 395450872}
+    - target: {fileID: 114841200866888688, guid: 111654ac6051e4d0aa5c3b534c180677,
+        type: 2}
+      propertyPath: CoinPrefab
+      value: 
+      objectReference: {fileID: 1571566150437796, guid: 02dc7d66da318204f8bb21b011ecd0b9,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 111654ac6051e4d0aa5c3b534c180677, type: 2}
   m_IsPrefabParent: 0

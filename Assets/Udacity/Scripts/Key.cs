@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Key : MonoBehaviour {
 	public GameObject[] keysPositions;
 	public GameObject KeyPoofPrefab;
+	public GameObject CoinPrefab;
 	public Door door;
 	public Image imageKey;
 
@@ -15,7 +16,15 @@ public class Key : MonoBehaviour {
 	private AudioSource audioSource;
 
 	private void Awake() {
-		keyPosition = keysPositions[Random.Range(0, keysPositions.Length)].transform.position;
+		int randomElement = Random.Range(0, keysPositions.Length);
+
+		for (int i = 0; i < keysPositions.Length; i++) {
+			if (i != randomElement) {
+				Instantiate(CoinPrefab, keysPositions[i].transform.position, keysPositions[i].transform.rotation);
+			}
+		}
+
+		keyPosition = keysPositions[randomElement].transform.position;
 		transform.position = keyPosition;
 
 		audioSource = GetComponent<AudioSource>();
